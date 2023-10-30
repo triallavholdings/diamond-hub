@@ -1,0 +1,2 @@
+from .company_address_admin import CompanyAddressAdmin
+from .company_details_admin import CompanyDetail

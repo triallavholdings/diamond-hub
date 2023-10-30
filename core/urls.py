@@ -17,7 +17,11 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('home.urls')),
-    path("admin/", admin.site.urls),
-    path("", include('admin_gradient.urls'))
+    path('', include('admin_gradient.urls')),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('edc_base.auth.urls')),
+    path('admin/', include('edc_base.auth.urls')),
+    path('edc_base/', include('edc_base.urls')),
+    path('edc_protocol/', include('edc_protocol.urls')),
+    path('edc_device/', include('edc_device.urls')),
 ]
